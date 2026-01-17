@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Favorite Person 🧡</title>
+<style>
+body {
+margin: 0;
+font-family: 'Comic Sans MS', 'Trebuchet MS', cursive;
+background-color: #000;
+color: white;
+text-align: center;
+}
+
+header {
+background: linear-gradient(135deg, orange, black);
+padding: 40px 20px;
+}
+
+header h1 {
+font-size: 3em;
+margin: 0;
+}
+
+header p {
+font-size: 1.2em;
+}
+
+section {
+padding: 50px 20px;
+border-bottom: 3px solid orange;
+}
+
+h2 {
+color: orange;
+font-size: 2.2em;
+margin-bottom: 20px;
+}
+
+.card {
+background: white;
+color: black;
+max-width: 800px;
+margin: 20px auto;
+padding: 25px;
+border-radius: 20px;
+box-shadow: 0 0 20px orange;
+}
+
+.card ul {
+list-style: "🧡 ";
+text-align: left;
+padding-left: 40px;
+font-size: 1.2em;
+}
+
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+}
+
+.gallery img {
+width: 200px;
+height: 250px;
+object-fit: cover;
+border-radius: 15px;
+border: 4px solid orange;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+transform: scale(1.1) rotate(-2deg);
+box-shadow: 0 0 25px orange;
+}
+
+button {
+background: orange;
+color: black;
+border: none;
+padding: 15px 25px;
+border-radius: 30px;
+font-size: 1.1em;
+cursor: pointer;
+transition: 0.3s;
+margin-top: 15px;
+}
+
+button:hover {
+background: white;
+transform: scale(1.1);
+}
+
+footer {
+background: black;
+padding: 20px;
+font-size: 0.9em;
+color: orange;
+}
+
+.hidden {
+display: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🧡 My Favorite Person 🧡</h1>
+<p>Made with love for my Marlington boy 🖤🤍</p>
+</header>
+
+<section>
+<h2>📸 My Favorite Pictures of You</h2>
+<div class="gallery">
+<!-- EASY: replace filenames with your own pictures -->
+<img src="him1.jpg" alt="pic">
+<img src="him2.jpg" alt="pic">
+<img src="him3.jpg" alt="pic">
+</div>
+<p>(Hover over the pics 😉)</p>
+</section>
+
+<section>
+<h2>💖 What I Love About You</h2>
+<div class="card">
+<ul>
+<li>Your smile literally fixes my bad days</li>
+<li>The way you make me laugh even when I’m mad</li>
+<li>Your heart (even when you act tough)</li>
+<li>How proud I am to call you mine</li>
+<li>Everything about YOU 🥹</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>🔮 Our Future</h2>
+<div class="card">
+<p>
+I imagine a future with you full of laughter, love,
+late-night talks, inside jokes, and dreams coming true.
+No matter what, I want YOU by my side 🧡
+</p>
+<button onclick="revealFuture()">Click for a secret 👀</button>
+<p id="futureText" class="hidden">
+One day we’ll look back at this and smile knowing we made it ❤️
+</p>
+</div>
+</section>
+
+<section>
+<h2>📝 Our Bucket List</h2>
+<div class="card">
+<ul>
+<li>Go on a spontaneous road trip 🚗</li>
+<li>Watch a sunrise together 🌅</li>
+<li>Take goofy pictures everywhere 📸</li>
+<li>Support each other’s dreams 💭</li>
+<li>Grow old and still be best friends 🧡</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>😂 Why You’re Stuck With Me</h2>
+<div class="card">
+<p id="jokeText">Click the button 😏</p>
+<button onclick="goofyMessage()">Press Me</button>
+</div>
+</section>
+
+<footer>
+Made with 🧡 just for you | Forever your biggest fan
+</footer>
+
+<script>
+function revealFuture() {
+document.getElementById("futureText").classList.toggle("hidden");
+}
+
+function goofyMessage() {
+const messages = [
+"Because I love you. Duh.",
+"Because we’re literally unstoppable together 💪",
+"Because you’re my favorite human.",
+"Because you make my heart go brrr 🥰",
+"Because Marlington boys are elite 😉"
+];
+const random = Math.floor(Math.random() * messages.length);
+document.getElementById("jokeText").innerText = messages[random];
+}
+</script>
+
+</body>
+</html>
